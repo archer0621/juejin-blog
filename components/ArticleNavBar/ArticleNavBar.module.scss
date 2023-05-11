@@ -1,0 +1,22 @@
+.nav-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.triangle {
+  padding-right: 2rem;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    right: 8px;
+    top: 40%;
+    content: "";
+    height: 5px;
+    width: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #8a9aa9;
+  }
+}
+

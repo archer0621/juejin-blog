@@ -1,0 +1,86 @@
+.fixed_btn {
+  position: fixed;
+  right: 20px;
+  bottom: 10px;
+
+  .spinner {
+    display: none;
+
+    &.active {
+      width: 32px;
+      height: 32px;
+      display: grid;
+      border: 4.5px solid #0000;
+      border-radius: 50%;
+      border-color: #dbdcef #0000;
+      animation: spinner-e04l1k 1s infinite linear;
+
+      &::before {
+        content: "";
+        grid-area: 1/1;
+        margin: 2.2px;
+        border: inherit;
+        border-radius: 50%;
+        border-color: #474bff #0000;
+        animation: inherit;
+        animation-duration: 0.5s;
+        animation-direction: reverse;
+      }
+
+      &::after {
+        content: "";
+        grid-area: 1/1;
+        margin: 2.2px;
+        border: inherit;
+        border-radius: 50%;
+        margin: 8.9px;
+      }
+    }
+  }
+
+  @keyframes spinner-e04l1k {
+    100% {
+      transform: rotate(1turn);
+    }
+  }
+
+  .fixed_btn_item {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 10px 0;
+    background: var(--primary-background-color);
+    box-shadow: 0 0 7px var(--shadow-color);
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+    border: var(--border-color) solid 1px;
+
+    &:first-child {
+      color: var(--primary-text-color);
+    }
+
+    &:nth-child(2) {
+      //  降低饱和度
+      filter: opacity(0.7);
+      color: var(--link-color);
+    }
+
+    &.hide {
+      display: none;
+    }
+
+    &:hover {
+      box-shadow: 0 0 15px var(--shadow-color);
+    }
+
+    &:last-child {
+      background-image: var(--theme-icon);
+      background-size: 20px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+}

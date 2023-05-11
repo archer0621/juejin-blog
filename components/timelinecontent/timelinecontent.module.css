@@ -1,0 +1,8 @@
+.timelinecontent {
+    width: 100%;
+    position: relative;
+    margin-top: 0.33rem;
+    /* padding: 0.33rem; */
+    display: flex;
+    overflow: hidden;
+}

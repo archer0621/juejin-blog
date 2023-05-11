@@ -1,0 +1,34 @@
+// 极小分辨率移动端设备
+@mixin media-mini-mobile {
+  @media screen and (max-width: 311px) {
+    @content;
+  }
+}
+
+// 介于极小分辨率和正常分辨率之间的移动端设备
+@mixin media-between-mini-and-normal-mobile {
+  @media screen and (min-width: 311px) and (max-width: 575px) {
+    @content;
+  }
+}
+
+// 移动端设备
+@mixin media-mobile {
+  @media screen and (max-width: 575px) {
+    @content;
+  }
+}
+
+// ipad
+@mixin media-ipad {
+  @media screen and (min-width: 575px) and (max-width: 900px) {
+    @content;
+  }
+}
+
+//ipad-pc
+@mixin media-ipad-pc {
+  @media screen and (min-width: 900px) and (max-width: 1190px) {
+    @content;
+  }
+}

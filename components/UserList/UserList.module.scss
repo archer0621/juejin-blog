@@ -1,0 +1,75 @@
+.container {
+  width: 240px;
+  background-color: var(--primary-background-color);
+
+  border-radius: 2px;
+  margin-bottom: 1.3rem;
+  font-size: 1.16rem;
+  line-height: 1.29;
+  color: var(--primary-text-color);
+
+  .user-block-header {
+    border-bottom: 1px solid hsla(0, 0%, 59.2%, .1);
+    padding: 1rem 1.3rem;
+  }
+
+  .user-item {
+    &:hover {
+      background-color: var(--secondary-background-color);
+    }
+
+    .link {
+      padding: 1rem 1.3rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+
+      .avatar {
+        flex: 0 0 auto;
+        width: 3.8rem;
+        height: 3.8rem;
+        border-radius: 50%;
+        margin-right: .5rem;
+      }
+
+      .user-info {
+        overflow: hidden;
+
+        .user-name {
+          font-size: 1.16rem;
+          font-weight: 400;
+          color: var(--primary-text-color);
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          margin-bottom: 3px;
+
+          .name {
+            max-width: 128px;
+            display: inline-block;
+            vertical-align: top;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+        }
+
+        .description {
+          color: var(--secondary-text-color);
+          font-size: 1rem;
+          margin-bottom: 3px;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+    }
+  }
+
+  .user-more {
+    color: #007fff;
+    padding: 1rem 0;
+    text-align: center;
+    border-top: 1px solid hsla(0, 0%, 59.2%, .1);
+  }
+}
